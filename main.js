@@ -10,7 +10,8 @@ function initTabMenu() {
       tabContent.forEach(section => {
         section.classList.remove('active');
       });
-      tabContent[index].classList.add('active');
+      const direcao = tabContent[index].dataset.anime;
+      tabContent[index].classList.add('active', direcao);
     }
 
     tabMenu.forEach((itemMenu, index) => {
@@ -42,18 +43,38 @@ function initSmoothScroll() {
     event.preventDefault();
     const href = event.currentTarget.getAttribute('href');
     const section = document.querySelector(href);
-    
+
     section.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
     });
-
   }
   internalLinks.forEach(link => {
     link.addEventListener('click', scrollToSection);
   });
 }
 
+function initAnimateScroll() {
+  const sections = document.querySelectorAll('.js-scroll');
+  const halfWindow = window.innerHeight * 0.4;
+
+  if (sections.length) {
+    function animateScroll() {
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top - halfWindow;
+        const isSectionVisible = sectionTop - halfWindow < 0;
+        if (isSectionVisible) {
+          section.classList.add('active');
+        }
+      });
+    }
+
+    animateScroll();
+    window.addEventListener('scroll', animateScroll);
+  }
+}
+
 initTabMenu();
 initAccordion();
 initSmoothScroll();
+initAnimateScroll();

@@ -4,15 +4,35 @@
 
     &.active {
       display: block;
-      animation: showContent 0.5s forwards;
+      
+
+      &.show-right{
+        animation: show-right 0.5s forwards;
+      }
+
+      &.show-down{
+        animation: show-down 0.5s forwards;
+      }
     }
   }
 }
 
-@keyframes showContent {
+@keyframes show-right {
   from {
     opacity: 0;
     transform: translate3d(-30px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
   }
 
   to {
@@ -49,4 +69,15 @@
     opacity: 1;
     max-height: 200px;
   }
+}
+
+.js-scroll {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: 0.3s;
+}
+
+.js-scroll.active {
+  opacity: 1;
+  transform: translateX(0);
 }
