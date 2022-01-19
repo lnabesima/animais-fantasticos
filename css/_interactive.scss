@@ -1,16 +1,15 @@
-.js-tabcontent {
+[data-tabcontent] {
   section {
     display: none;
 
     &.active {
       display: block;
-      
 
-      &.show-right{
+      &.show-right {
         animation: show-right 0.5s forwards;
       }
 
-      &.show-down{
+      &.show-down {
         animation: show-down 0.5s forwards;
       }
     }
@@ -41,20 +40,20 @@
   }
 }
 
-.js-accordion dd {
+[data-accordion] dd {
   display: none;
 }
 
-.js-accordion dt::after {
+[data-accordion] dt::after {
   content: '↴';
   margin-left: 10px;
 }
 
-.js-accordion dt.active::after {
+[data-accordion] dt.active::after {
   content: '⬑';
 }
 
-.js-accordion dd.active {
+[data-accordion] dd.active {
   display: block;
   animation: slideDown 0.5s both;
 }
@@ -71,13 +70,13 @@
   }
 }
 
-.js-scroll {
+[data-scroll] {
   opacity: 0;
   transform: translateX(-30px);
   transition: 0.3s;
 }
 
-.js-scroll.active {
+[data-scroll].active {
   opacity: 1;
   transform: translateX(0);
 }

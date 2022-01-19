@@ -1,6 +1,6 @@
 function initTabMenu() {
-  const tabMenu = document.querySelectorAll('.js-tabmenu li');
-  const tabContent = document.querySelectorAll('.js-tabcontent section');
+  const tabMenu = document.querySelectorAll('[data-tabmenu] li');
+  const tabContent = document.querySelectorAll('[data-tabcontent] section');
   //This part will add the class 'Active' to the first node of tabContent. Was commented out because it is better to just add to the HTML.
   //tabContent[0].classList.add('active');
 
@@ -23,7 +23,7 @@ function initTabMenu() {
 }
 
 function initAccordion() {
-  const accordionList = document.querySelectorAll('.js-accordion dt');
+  const accordionList = document.querySelectorAll('[data-accordion] dt');
   if (accordionList.length) {
     function activeAccordion() {
       this.classList.toggle('active');
@@ -37,7 +37,7 @@ function initAccordion() {
 }
 
 function initSmoothScroll() {
-  const internalLinks = document.querySelectorAll('.js-menu a[href^="#"]');
+  const internalLinks = document.querySelectorAll('[data-menu] a[href^="#"]');
 
   function scrollToSection(event) {
     event.preventDefault();
@@ -55,7 +55,7 @@ function initSmoothScroll() {
 }
 
 function initAnimateScroll() {
-  const sections = document.querySelectorAll('.js-scroll');
+  const sections = document.querySelectorAll('[data-scroll]');
   const halfWindow = window.innerHeight * 0.4;
 
   if (sections.length) {

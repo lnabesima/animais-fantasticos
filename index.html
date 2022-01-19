@@ -16,7 +16,7 @@
     <title>Animais Fantásticos</title>
   </head>
   <body>
-    <nav class="menu js-menu">
+    <nav class="menu" data-menu>
       <ul>
         <li><a href="#animais">Animais</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -25,9 +25,9 @@
       </ul>
     </nav>
 
-    <section class="grid-section animais js-scroll" id="animais">
+    <section class="grid-section animais" data-scroll id="animais">
       <h1 class="titulo">Animais Fantásticos</h1>
-      <ul class="animais__lista js-tabmenu">
+      <ul class="animais__lista" data-tabmenu>
         <li><img src="./img/imagem1.jpg" alt="Raposa" /></li>
         <li><img src="./img/imagem2.jpg" alt="Esquilo" /></li>
         <li><img src="./img/imagem3.jpg" alt="Urso Preto" /></li>
@@ -36,7 +36,7 @@
         <li><img src="./img/imagem6.jpg" alt="Leão" /></li>
       </ul>
 
-      <div class="animais__descricao js-tabcontent">
+      <div class="animais__descricao" data-tabcontent>
         <section class="active" data-anime="show-down">
           <h2>Raposa</h2>
           <p>
@@ -166,9 +166,9 @@
       </div>
     </section>
 
-    <section class="grid-section faq js-scroll" id="faq">
+    <section class="grid-section faq" data-scroll id="faq">
       <h1 class="titulo">Faq</h1>
-      <dl class="faq__lista js-accordion">
+      <dl class="faq__lista" data-accordion>
         <dt>Qual a idade dos animais?</dt>
         <dd>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore aut
@@ -203,7 +203,7 @@
       </dl>
     </section>
 
-    <section class="grid-section contato js-scroll" id="contato">
+    <section class="grid-section contato" data-scroll id="contato">
       <h1 class="titulo">Contato</h1>
       <div class="mapa">
         <img src="./img/mapa.png" alt="Localização do escritório" />
