@@ -245,6 +245,9 @@ body {
   display: none;
 }
 
+[data-accordion] dt {
+  cursor: pointer;
+}
 [data-accordion] dt::after {
   content: "↴";
   margin-left: 10px;
