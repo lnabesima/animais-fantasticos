@@ -9,6 +9,7 @@ import initMobileMenu from './modules/mobileMenu.js';
 import initWorkingHours from './modules/workingHours.js';
 import initFetchAnimals from './modules/fetchAnimals.js';
 import initNumberAnimation from './modules/numberAnimation.js';
+import initFetchBitcoinPrice from './modules/fetchBitcoinPrice.js';
 
 initTabMenu();
 initAccordion();
@@ -21,3 +22,4 @@ initMobileMenu();
 initWorkingHours();
 initFetchAnimals();
 initNumberAnimation();
+initFetchBitcoinPrice();

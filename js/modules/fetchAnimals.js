@@ -1,13 +1,17 @@
 export default function initFetchAnimals() {
   async function fetchAnimals(url) {
-    const response = await fetch(url);
-    const responseJSON = await response.json();
-    const numerosGrid = document.querySelector('.numeros-grid');
+    try {
+      const response = await fetch(url);
+      const responseJSON = await response.json();
+      const numerosGrid = document.querySelector('.numeros-grid');
 
-    responseJSON.forEach(animal => {
-      const divAnimal = createAnimal(animal);
-      numerosGrid.appendChild(divAnimal);
-    });
+      responseJSON.forEach(animal => {
+        const divAnimal = createAnimal(animal);
+        numerosGrid.appendChild(divAnimal);
+      });
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   function createAnimal(animal) {
