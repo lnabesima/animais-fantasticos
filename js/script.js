@@ -6,8 +6,9 @@ import initModal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
 import initDropDownMenu from './modules/dropDownMenu.js';
 import initMobileMenu from './modules/mobileMenu.js';
-import initNumberAnimation from './modules/numberAnimation.js';
 import initWorkingHours from './modules/workingHours.js';
+import initFetchAnimals from './modules/fetchAnimals.js';
+import initNumberAnimation from './modules/numberAnimation.js';
 
 initTabMenu();
 initAccordion();
@@ -17,5 +18,6 @@ initModal();
 initTooltip();
 initDropDownMenu();
 initMobileMenu();
-initNumberAnimation();
 initWorkingHours();
+initFetchAnimals();
+initNumberAnimation();
