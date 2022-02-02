@@ -24,7 +24,7 @@ export default function initNumberAnimation() {
 
   function handleMutation(mutation) {
     if (mutation[0].target.classList.contains('active')) {
-      console.log(mutation[0].target.classList.contains('active'));
+      // console.log(mutation[0].target.classList.contains('active'));
       observer.disconnect();
       animateNumbers();
     }
