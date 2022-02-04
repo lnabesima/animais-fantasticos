@@ -3,18 +3,18 @@ export default function initModal() {
   const closeButton = document.querySelector('[data-modal=close]');
   const modalContainer = document.querySelector('[data-modal=container]');
 
+  function toggleModal(event) {
+    event.preventDefault();
+    modalContainer.classList.toggle('active');
+  }
+
+  function outsideClickModal(event) {
+    if (event.target === this) {
+      toggleModal(event);
+    }
+  }
+
   if (openButton && closeButton && modalContainer) {
-    function toggleModal(event) {
-      event.preventDefault();
-      modalContainer.classList.toggle('active');
-    }
-
-    function outsideClickModal(event) {
-      if (event.target === this) {
-        toggleModal(event);
-      }
-    }
-
     openButton.addEventListener('click', toggleModal);
     closeButton.addEventListener('click', toggleModal);
     modalContainer.addEventListener('click', outsideClickModal);

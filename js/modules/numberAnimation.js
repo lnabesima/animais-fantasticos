@@ -1,7 +1,7 @@
 export default function initNumberAnimation() {
   const observerTarget = document.querySelector('.numeros');
-  const observer = new MutationObserver(handleMutation);
-  observer.observe(observerTarget, { attributes: true });
+  let observer;
+
 
   function animateNumbers() {
     const numbers = document.querySelectorAll('[data-numero]');
@@ -11,7 +11,7 @@ export default function initNumberAnimation() {
       const increment = Math.floor(total * 0.007);
 
       const timer = setInterval(() => {
-        start = start + increment;
+        start += increment;
         number.innerText = start;
 
         if (start > total) {
@@ -28,4 +28,6 @@ export default function initNumberAnimation() {
       animateNumbers();
     }
   }
+  observer = new MutationObserver(handleMutation);
+  observer.observe(observerTarget, { attributes: true });
 }
