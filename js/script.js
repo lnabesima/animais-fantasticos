@@ -1,9 +1,9 @@
 import SmoothScroll from './modules/smoothScroll.js';
 import Accordion from './modules/accordion.js';
 import TabMenu from './modules/tabMenu.js';
+import Modal from './modules/modal.js';
 
 import initAnimateScroll from './modules/animateScroll.js';
-import initModal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
 import initDropDownMenu from './modules/dropDownMenu.js';
 import initMobileMenu from './modules/mobileMenu.js';
@@ -21,8 +21,14 @@ accordion.init();
 const tabMenu = new TabMenu('[data-tabmenu] li', '[data-tabcontent] section');
 tabMenu.init();
 
+const modal = new Modal(
+  '[data-modal=open]',
+  '[data-modal=close]',
+  '[data-modal=container]'
+);
+modal.init();
+
 initAnimateScroll();
-initModal();
 initTooltip();
 initDropDownMenu();
 initMobileMenu();
