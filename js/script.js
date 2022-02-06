@@ -9,7 +9,6 @@ import initDropDownMenu from './modules/dropDownMenu.js';
 import initMobileMenu from './modules/mobileMenu.js';
 import initWorkingHours from './modules/workingHours.js';
 import initFetchAnimals from './modules/fetchAnimals.js';
-import initNumberAnimation from './modules/numberAnimation.js';
 import initFetchBitcoinPrice from './modules/fetchBitcoinPrice.js';
 
 const smoothScroll = new SmoothScroll('[data-menu] a[href^="#"]');
@@ -36,5 +35,4 @@ initDropDownMenu();
 initMobileMenu();
 initWorkingHours();
 initFetchAnimals();
-initNumberAnimation();
 initFetchBitcoinPrice();

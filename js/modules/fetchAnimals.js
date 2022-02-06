@@ -1,3 +1,5 @@
+import NumberAnimation from './numberAnimation.js'
+
 export default function initFetchAnimals() {
   async function fetchAnimals(url) {
     function createAnimal(animal) {
@@ -18,6 +20,9 @@ export default function initFetchAnimals() {
         const divAnimal = createAnimal(animal);
         numerosGrid.appendChild(divAnimal);
       });
+      
+      const numberAnimation = new NumberAnimation('[data-numero]', '.numeros', 'active');
+      numberAnimation.init();
     } catch (error) {
       console.error(error);
     }
