@@ -28,5 +28,6 @@ export default class TabMenu {
       // this.activeTab(0)
       this.addTabMenuEvent();
     }
+    return this;
   }
 }
