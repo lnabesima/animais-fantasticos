@@ -4,12 +4,12 @@ import TabMenu from './modules/tabMenu.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
 import fetchAnimals from './modules/fetchAnimals.js';
+import fetchBitcoinPrice from './modules/fetchBitcoinPrice.js';
 import AnimateScroll from './modules/animateScroll.js'
 
 import initDropDownMenu from './modules/dropDownMenu.js';
 import initMobileMenu from './modules/mobileMenu.js';
 import initWorkingHours from './modules/workingHours.js';
-import fetchBitcoinPrice from './modules/fetchBitcoinPrice.js';
 
 const smoothScroll = new SmoothScroll('[data-menu] a[href^="#"]');
 smoothScroll.init();
