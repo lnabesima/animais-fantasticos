@@ -7,9 +7,8 @@ import fetchAnimals from './modules/fetchAnimals.js';
 import fetchBitcoinPrice from './modules/fetchBitcoinPrice.js';
 import AnimateScroll from './modules/animateScroll.js';
 import DropDownMenu from './modules/dropDownMenu.js';
-
 import MobileMenu from './modules/mobileMenu.js';
-import initWorkingHours from './modules/workingHours.js';
+import WorkingHours from './modules/workingHours.js';
 
 const smoothScroll = new SmoothScroll('[data-menu] a[href^="#"]');
 smoothScroll.init();
@@ -36,10 +35,11 @@ fetchBitcoinPrice(`https://blockchain.info/ticker`, '.btc-price');
 const animateScroll = new AnimateScroll('[data-scroll]');
 animateScroll.init();
 
-const dropDownMenu = new DropDownMenu('[data-dropdown]', "active");
+const dropDownMenu = new DropDownMenu('[data-dropdown]', 'active');
 dropDownMenu.init();
 
 const mobileMenu = new MobileMenu('[data-menu="button"]', '[data-menu="list"]');
 mobileMenu.init();
 
-initWorkingHours();
+const workingHours = new WorkingHours('[data-semana]', 'open');
+workingHours.init();
