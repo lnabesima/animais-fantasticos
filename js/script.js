@@ -9,6 +9,7 @@ import AnimateScroll from './modules/animateScroll.js';
 import DropDownMenu from './modules/dropDownMenu.js';
 import MobileMenu from './modules/mobileMenu.js';
 import WorkingHours from './modules/workingHours.js';
+import { SlideNav } from './modules/slide.js';
 
 const smoothScroll = new SmoothScroll('[data-menu] a[href^="#"]');
 smoothScroll.init();
@@ -43,3 +44,7 @@ mobileMenu.init();
 
 const workingHours = new WorkingHours('[data-semana]', 'open');
 workingHours.init();
+
+const slide = new SlideNav('.slider', '.wrapper');
+slide.init();
+slide.addControl('.custom-control');
