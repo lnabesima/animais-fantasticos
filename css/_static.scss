@@ -13,7 +13,8 @@ img {
   max-width: 100%;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -217,7 +218,7 @@ body {
     grid-gap: 10px;
 
     .titulo {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 
@@ -279,4 +280,11 @@ body {
   padding: 0.2rem 0.5rem;
   font-weight: bold;
   border-radius: 2px;
+}
+
+.arrow-black {
+  background: url(../img/arrow-black.svg) no-repeat center center;
+  display: inline-block;
+  width: 8px;
+  height: 10px;
 }
