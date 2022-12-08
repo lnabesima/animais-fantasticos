@@ -48,13 +48,20 @@
   cursor: pointer;
 
   &::after {
-    content: '↴';
+    content: '';
     margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: url(../img/arrow-red.svg) no-repeat center center;
+    rotate: 90deg;
+    transition: rotate 0.3s;
   }
 }
 
 [data-accordion] dt.active::after {
-  content: '⬑';
+  content: '';
+  rotate: -90deg;
 }
 
 [data-accordion] dd.active {
